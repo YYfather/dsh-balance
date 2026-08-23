@@ -2,7 +2,7 @@
 
 A DeepSeek Harness plugin that shows DeepSeek / MiMo account balance and per-request conversation cost in the composer dock, with model-aware peak/off-peak pricing and spend alerts (click the dock readout to configure).
 
-> 📦 Published on npm as `@maimu/dsh-balance` (one-click install via the DSH plugin market)
+> 📦 Published on npm as `@yyfather/dsh-balance` (one-click install via the DSH plugin market)
 
 ## Features
 
@@ -24,15 +24,15 @@ Once the plugin appears in the market (Settings → Plugin Market), open its car
 
 ### Option 2: manual
 
-1. Clone into the profile dependency folder (`$DSH_HOME/profiles/<name>/node_modules/@maimu/dsh-balance`):
+1. Clone into the profile dependency folder (`$DSH_HOME/profiles/<name>/node_modules/@yyfather/dsh-balance`):
    ```sh
-   git clone https://github.com/YYfather/dsh-balance.git "$HOME/.dsh/profiles/node_modules/@maimu/dsh-balance"
+   git clone https://github.com/YYfather/dsh-balance.git "$HOME/.dsh/profiles/node_modules/@yyfather/dsh-balance"
    ```
 2. Append to the profile's `cordis.patch.yml` (the user patch layer; survives reinstalls):
    ```yaml
    - insert:
        - id: dsh-balance
-         name: '@maimu/dsh-balance'
+         name: '@yyfather/dsh-balance'
    ```
 3. Restart DSH Desktop. The dock readout appears; click it to open the settings panel.
 
