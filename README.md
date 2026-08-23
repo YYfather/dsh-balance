@@ -2,6 +2,8 @@
 
 DeepSeek Harness 余额与开销插件。在对话底部状态栏（composer dock）显示 DeepSeek / MiMo 账户余额与话费开销，支持**逐请求计价**、**高峰/空闲分时段**、**多模型价目**与**花费超线提醒**（点击状态栏即可设置）。
 
+> 📦 已发布 npm：`@maimu/dsh-balance`（npm registry，可一键安装）
+
 ## 功能
 
 - **余额**：实时查询 DeepSeek 账户余额（仅本机可访问，密钥只存在于 Host 侧；当前会话为 MiMo 等外部模型时不显示 DeepSeek 余额）
@@ -16,15 +18,21 @@ DeepSeek Harness 余额与开销插件。在对话底部状态栏（composer doc
 
 ## 安装
 
-1. 克隆仓库到 DSH 的 profile 依赖目录（`%USERPROFILE%\.dsh\profiles\node_modules\@yyfather\dsh-balance` 或你的 `$DSH_HOME/profiles/<name>/node_modules/@yyfather/dsh-balance`）：
+### 方式一：插件市场一键安装（推荐）
+
+市场（设置 → 插件市场）中出现本插件后，在**可安装**页点击卡片即可走 DSH 官方的受管安装（npm 身份校验 + 安全快照 + 重启验证）。
+
+### 方式二：手动安装
+
+1. 克隆仓库到 DSH 的 profile 依赖目录（`%USERPROFILE%\.dsh\profiles\node_modules\@maimu\dsh-balance` 或你的 `$DSH_HOME/profiles/<name>/node_modules/@maimu/dsh-balance`）：
    ```sh
-   git clone https://github.com/YYfather/dsh-balance.git "$USERPROFILE\.dsh\profiles\node_modules\@yyfather\dsh-balance"
+   git clone https://github.com/YYfather/dsh-balance.git "$USERPROFILE\.dsh\profiles\node_modules\@maimu\dsh-balance"
    ```
 2. 在 profile 的 `cordis.patch.yml` 末尾追加（该文件是用户 patch 层，重装/升级不会覆盖；`%USERPROFILE%\.dsh\profiles\desktop\cordis.patch.yml`）：
    ```yaml
    - insert:
        - id: dsh-balance
-         name: '@yyfather/dsh-balance'
+         name: '@maimu/dsh-balance'
    ```
 3. 重启 DSH Desktop。状态栏底部即出现余额/开销一行；点击可打开设置面板。
 
