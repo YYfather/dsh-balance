@@ -1,6 +1,6 @@
 {
   "name": "@yyfather/dsh-balance",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness 余额与开销插件：状态栏显示 DeepSeek/MiMo 余额与花费（本会话/本次活跃/最近一次/上次对话），逐请求按模型+峰谷时段计价，支持花费超线提醒（点击设置）",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
   },
   "files": ["index.js", "client.js", "cordis.patch.yml", "LICENSE", "README.md", "README_EN.md"],
