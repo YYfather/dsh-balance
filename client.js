@@ -1,12 +1,18 @@
+window.__ModuleLoader__.load({
+	id: "@yyfather/dsh-balance",
+	factory: (require) => {
+		var module = { exports: {} };
+		var exports = module.exports;
+
 /**
  * dsh-balance — Client half (browser).
  *
  * Registers the ambient composition dock readout. All data comes from the
  * Host's loopback-only same-origin routes; no credential ever reaches the page.
  */
-import React from 'react'
+const React = require("react");
 
-export const inject = ['slots']
+var inject = ["slots"];
 
 const STATE_ROUTE = '/dsh-balance/api/state'
 const CONFIG_ROUTE = '/dsh-balance/api/config'
@@ -225,7 +231,7 @@ function BalanceDock(props) {
   )
 }
 
-export function apply(ctx) {
+function apply(ctx) {
   ctx.effect(() => {
     const style = document.createElement('style')
     style.dataset.plugin = 'dsh-balance'
@@ -241,3 +247,10 @@ export function apply(ctx) {
     inject: () => ({ loadState, saveConfig }),
   }, BalanceDock))
 }
+
+
+		exports.apply = apply;
+		exports.inject = inject;
+		return module.exports;
+	},
+});
