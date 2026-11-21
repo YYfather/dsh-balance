@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: "@yyfather/dsh-balance",
+	id: "@maimu/dsh-balance",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
